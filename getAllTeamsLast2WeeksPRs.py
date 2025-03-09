@@ -30,7 +30,7 @@ def getAthletesLastXMeets(soup, numberOfMeets=2):
 
 def getTeamsLinksAndNames(soup):
     teamLinks,teamNames=[],[]
-    tableData=soup.find("h3", string="TEAMS").parent.find("table").findAll("a")
+    tableData=soup.find("h3", string="TEAMS").parent.find("table").find_all("a")
     for index,eachTeam in enumerate(tableData):
         if(index%2==0):
             teamLinks.append(eachTeam["href"])
@@ -48,7 +48,7 @@ def getTeamsAthleteLinksAndNames(teamLinks):
     return teamAthleteLinks, teamAthleteNames
 
 def getAthleteLinksAndNames(soup):
-    athleteLinksATag = soup.find('h3',string='ROSTER').find_parent().find('tbody').findAll('a')
+    athleteLinksATag = soup.find('h3',string='ROSTER').find_parent().find('tbody').find_all('a')
     athleteNames,athleteLinks=[],[]
     for eachLink in athleteLinksATag:        
         nameParts=eachLink.getText().split(', ')
@@ -111,7 +111,7 @@ def getAllTeamsLast2WeeksPrsPutInJSONFormat():
                     format="%b %d, %Y"
                     meetDate = datetime.strptime(inputDate,format).date()
                     meetName = athletesRecentMeets[meetIndex].find('thead').find('a').text.strip()
-                    allPRsAtPRMeet = athletesRecentMeets[meetIndex].findAll('tr', class_='highlight')
+                    allPRsAtPRMeet = athletesRecentMeets[meetIndex].find_all('tr', class_='highlight')
                     for eachPRatPRMeet in allPRsAtPRMeet:
                         eventName = eachPRatPRMeet.find('td').text.strip()
                         pr = eachPRatPRMeet.find('a').text.strip()
