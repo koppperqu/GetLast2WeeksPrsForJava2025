@@ -1,0 +1,65 @@
+[
+    {
+        "meetname": "La Crosse Final Qualifier",
+        "meetdate": "Mar 08, 2025",
+        "numberofprs": 11,
+        "uniqueprs": 11,
+        "prsatmeet": [
+            {
+                "athletename": "Tyler Botz",
+                "eventname": "60H",
+                "pr": "8.46"
+            },
+            {
+                "athletename": "Soren Johnson",
+                "eventname": "SP",
+                "pr": "16.41m"
+            },
+            {
+                "athletename": "Stefan Klechefski",
+                "eventname": "60",
+                "pr": "6.73"
+            },
+            {
+                "athletename": "Nicholas Luebke",
+                "eventname": "200",
+                "pr": "22.57"
+            },
+            {
+                "athletename": "Jake Madsen",
+                "eventname": "60H",
+                "pr": "8.60"
+            },
+            {
+                "athletename": "Nick Odom",
+                "eventname": "LJ",
+                "pr": "7.02m"
+            },
+            {
+                "athletename": "Cameron Pease",
+                "eventname": "400",
+                "pr": "50.10"
+            },
+            {
+                "athletename": "Blake Postler",
+                "eventname": "60H",
+                "pr": "8.15"
+            },
+            {
+                "athletename": "Kayla Behnke",
+                "eventname": "WT",
+                "pr": "19.21m"
+            },
+            {
+                "athletename": "Sophia Crespo",
+                "eventname": "200",
+                "pr": "25.60"
+            },
+            {
+                "athletename": "Libby Huber",
+                "eventname": "200",
+                "pr": "25.98"
+            }
+        ]
+    }
+]

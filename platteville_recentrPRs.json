@@ -1,0 +1,28 @@
+[
+    {
+        "meetname": "La Crosse Final Qualifier",
+        "meetdate": "Mar 08, 2025",
+        "numberofprs": 1,
+        "uniqueprs": 1,
+        "prsatmeet": [
+            {
+                "athletename": "Spencer Vanek",
+                "eventname": "400",
+                "pr": "48.54"
+            }
+        ]
+    },
+    {
+        "meetname": "UW-Platteville Final Qualifying Meet",
+        "meetdate": "Mar 07, 2025",
+        "numberofprs": 1,
+        "uniqueprs": 1,
+        "prsatmeet": [
+            {
+                "athletename": "Nicholas Walechka",
+                "eventname": "SP",
+                "pr": "16.03m"
+            }
+        ]
+    }
+]

@@ -1,0 +1,140 @@
+[
+    {
+        "meetname": "La Crosse Final Qualifier",
+        "meetdate": "Mar 08, 2025",
+        "numberofprs": 26,
+        "uniqueprs": 26,
+        "prsatmeet": [
+            {
+                "athletename": "Jake Gardner",
+                "eventname": "SP",
+                "pr": "15.06m"
+            },
+            {
+                "athletename": "Lukas Johnson",
+                "eventname": "60H",
+                "pr": "8.13"
+            },
+            {
+                "athletename": "Owen Layton",
+                "eventname": "Mile",
+                "pr": "4:20.10"
+            },
+            {
+                "athletename": "Nash Merklein",
+                "eventname": "Mile",
+                "pr": "4:14.34"
+            },
+            {
+                "athletename": "Aaron Poelma",
+                "eventname": "60H",
+                "pr": "8.07"
+            },
+            {
+                "athletename": "Logan Powers",
+                "eventname": "WT",
+                "pr": "18.20m"
+            },
+            {
+                "athletename": "Gavin Sargeant",
+                "eventname": "TJ",
+                "pr": "14.18m"
+            },
+            {
+                "athletename": "Joey Sullivan",
+                "eventname": "Mile",
+                "pr": "4:10.29"
+            },
+            {
+                "athletename": "Ashley Davies",
+                "eventname": "LJ",
+                "pr": "5.63m"
+            },
+            {
+                "athletename": "Araceli De Leo Lopez",
+                "eventname": "PV",
+                "pr": "4.00m"
+            },
+            {
+                "athletename": "Lucy Duchac",
+                "eventname": "5000",
+                "pr": "17:03.29"
+            },
+            {
+                "athletename": "Gwen Hinz",
+                "eventname": "800",
+                "pr": "2:12.80"
+            },
+            {
+                "athletename": "Becca Immer",
+                "eventname": "Mile",
+                "pr": "5:05.28"
+            },
+            {
+                "athletename": "Mackenzey Kronberg",
+                "eventname": "TJ",
+                "pr": "11.72m"
+            },
+            {
+                "athletename": "Ryana Mathis",
+                "eventname": "Mile",
+                "pr": "5:20.83"
+            },
+            {
+                "athletename": "Madelynn McIntyre",
+                "eventname": "5000",
+                "pr": "16:59.94"
+            },
+            {
+                "athletename": "Jenna Miller",
+                "eventname": "LJ",
+                "pr": "5.66m"
+            },
+            {
+                "athletename": "Gabby Patterson",
+                "eventname": "PV",
+                "pr": "3.50m"
+            },
+            {
+                "athletename": "Jadyn Roden",
+                "eventname": "SP",
+                "pr": "13.04m"
+            },
+            {
+                "athletename": "Bryn Sato",
+                "eventname": "Mile",
+                "pr": "5:13.80"
+            },
+            {
+                "athletename": "Alli Thomas",
+                "eventname": "800",
+                "pr": "2:12.89"
+            },
+            {
+                "athletename": "Macie Todd",
+                "eventname": "HJ",
+                "pr": "1.72m"
+            },
+            {
+                "athletename": "Natalie Wees",
+                "eventname": "3000",
+                "pr": "10:41.33"
+            },
+            {
+                "athletename": "Julie Yang",
+                "eventname": "60",
+                "pr": "7.65"
+            },
+            {
+                "athletename": "Makenna Zak",
+                "eventname": "60",
+                "pr": "7.63"
+            },
+            {
+                "athletename": "Megan Zemke",
+                "eventname": "60H",
+                "pr": "8.84"
+            }
+        ]
+    }
+]

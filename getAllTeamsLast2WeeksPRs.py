@@ -1,6 +1,10 @@
 from datetime import datetime
 from itertools import groupby
-from fetchDataToAddOrUpdateDB import *
+import json
+import time
+from urllib.request import urlopen
+
+from bs4 import BeautifulSoup
 
 from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent
@@ -23,6 +27,34 @@ def getAthletesLastXMeets(soup, numberOfMeets=2):
         recentMeets.append(recentMeetsForAthlete[x])
         recentMeetURLs.append(recentMeetsForAthlete[x].find('thead').find('a')['href'])
     return recentMeetURLs,recentMeets
+
+def getTeamsLinksAndNames(soup):
+    teamLinks,teamNames=[],[]
+    tableData=soup.find("h3", string="TEAMS").parent.find("table").findAll("a")
+    for index,eachTeam in enumerate(tableData):
+        if(index%2==0):
+            teamLinks.append(eachTeam["href"])
+            teamNames.append(eachTeam.text.replace('Wis.-',''))
+    return teamLinks, teamNames
+
+def getTeamsAthleteLinksAndNames(teamLinks):
+    teamAthleteLinks, teamAthleteNames = [],[]
+    for eachTeam in teamLinks:
+        html = urlopen(eachTeam)
+        soup=BeautifulSoup(html.read(), "html.parser")
+        athleteLinks,athleteNames = getAthleteLinksAndNames(soup)
+        teamAthleteLinks.append(athleteLinks)
+        teamAthleteNames.append(athleteNames)
+    return teamAthleteLinks, teamAthleteNames
+
+def getAthleteLinksAndNames(soup):
+    athleteLinksATag = soup.find('h3',string='ROSTER').find_parent().find('tbody').findAll('a')
+    athleteNames,athleteLinks=[],[]
+    for eachLink in athleteLinksATag:        
+        nameParts=eachLink.getText().split(', ')
+        athleteNames.append(nameParts[1].strip()+' '+nameParts[0].strip())
+        athleteLinks.append('https://www.tfrrs.org'+eachLink['href'])
+    return(athleteLinks,athleteNames)
 
 def getAllTeamsLast2WeeksPrsPutInJSONFormat():
     html = urlopen(wiacTfrrsURL)
@@ -47,7 +79,24 @@ def getAllTeamsLast2WeeksPrsPutInJSONFormat():
             #get their meet reuslt and check if pr recent
             percent = (athleteIndex + 1) / len(teamAthleteLinks[teamIndex]) * 100
             print(f"Progress: {percent:.2f}%", end="\r")
-            html=urlopen(eachAthleteLink)
+            try:
+                time.sleep(0.5)
+                html=urlopen(eachAthleteLink)
+            except:
+                try:
+                    print("Second try (30seconds) "+eachAthleteLink)
+                    time.sleep(30)
+                    html=urlopen(eachAthleteLink)
+                except:
+                    try:
+                        print("Third try (60seconds) "+eachAthleteLink)
+                        time.sleep(60)
+                        html=urlopen(eachAthleteLink)
+                    except:
+                        print("Fourth try (120seconds) "+eachAthleteLink)
+                        time.sleep(120)
+                        html=urlopen(eachAthleteLink)
+
             soup=BeautifulSoup(html.read(), "html.parser")
             athleteRecentMeetURLs, athletesRecentMeets= getAthletesLastXMeets(soup)
             ##**COMPARE THE MEETS IF IT IS A SCHOOLS MOST RECENT CHECK FOR PRS IF NOT SKIP**##
@@ -86,7 +135,9 @@ def getAllTeamsLast2WeeksPrsPutInJSONFormat():
                             "uniqueprs":uniqueNameCount,
                             "prsatmeet":listOfPRS}
                 prepForJSON.append(jsonMeetOBJ)
-        fileName = BASE_DIR / f'{slugify(teamNames[teamIndex])}_recentrPRs.json'
+        fileName = BASE_DIR / f'{teamNames[teamIndex].lower().replace(" ","-")}_recentrPRs.json'
         f = open(fileName, "w")
         f.write(json.dumps(prepForJSON, indent=4))
         f.close()
+
+getAllTeamsLast2WeeksPrsPutInJSONFormat()

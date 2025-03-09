@@ -1,0 +1,20 @@
+[
+    {
+        "meetname": "La Crosse Final Qualifier",
+        "meetdate": "Mar 08, 2025",
+        "numberofprs": 2,
+        "uniqueprs": 2,
+        "prsatmeet": [
+            {
+                "athletename": "Derek Penzkover",
+                "eventname": "Mile",
+                "pr": "4:08.83"
+            },
+            {
+                "athletename": "Kansas Smith",
+                "eventname": "TJ",
+                "pr": "13.61m"
+            }
+        ]
+    }
+]

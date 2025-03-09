@@ -1,0 +1,15 @@
+[
+    {
+        "meetname": "La Crosse Final Qualifier",
+        "meetdate": "Mar 08, 2025",
+        "numberofprs": 1,
+        "uniqueprs": 1,
+        "prsatmeet": [
+            {
+                "athletename": "Eddie Jones",
+                "eventname": "60",
+                "pr": "6.78"
+            }
+        ]
+    }
+]
