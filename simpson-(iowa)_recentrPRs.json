@@ -1,0 +1,40 @@
+[
+    {
+        "meetname": "Midwest Twilight Final Qualifier",
+        "meetdate": "May 14, 2025",
+        "numberofprs": 6,
+        "uniqueprs": 6,
+        "prsatmeet": [
+            {
+                "athletename": "Brenden Godbout",
+                "eventname": "400H",
+                "pr": "52.74"
+            },
+            {
+                "athletename": "Adonis McKenzie",
+                "eventname": "400",
+                "pr": "49.98"
+            },
+            {
+                "athletename": "Teghan Booth",
+                "eventname": "1500",
+                "pr": "4:42.75"
+            },
+            {
+                "athletename": "Emma Cooper",
+                "eventname": "200",
+                "pr": "25.87"
+            },
+            {
+                "athletename": "Maddax DeVault",
+                "eventname": "400H",
+                "pr": "1:04.33"
+            },
+            {
+                "athletename": "Olivia Merrill",
+                "eventname": "SP",
+                "pr": "13.21m"
+            }
+        ]
+    }
+]

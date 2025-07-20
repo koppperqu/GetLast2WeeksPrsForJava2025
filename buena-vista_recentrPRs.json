@@ -1,0 +1,65 @@
+[
+    {
+        "meetname": "American Rivers Conference Championships",
+        "meetdate": "May 08, 2025",
+        "numberofprs": 11,
+        "uniqueprs": 8,
+        "prsatmeet": [
+            {
+                "athletename": "Scott Drouillard",
+                "eventname": "HT",
+                "pr": "31.65m"
+            },
+            {
+                "athletename": "Ethan Martin",
+                "eventname": "TJ",
+                "pr": "12.19m"
+            },
+            {
+                "athletename": "Kyle Miller",
+                "eventname": "800",
+                "pr": "1:49.59"
+            },
+            {
+                "athletename": "Nick Walch",
+                "eventname": "400H",
+                "pr": "56.62"
+            },
+            {
+                "athletename": "Megan Bakke",
+                "eventname": "800",
+                "pr": "2:19.21"
+            },
+            {
+                "athletename": "Takara Conley",
+                "eventname": "800",
+                "pr": "2:25.57"
+            },
+            {
+                "athletename": "Ava Mills",
+                "eventname": "JT",
+                "pr": "31.42m"
+            },
+            {
+                "athletename": "Ava Mills",
+                "eventname": "Hep",
+                "pr": "3481"
+            },
+            {
+                "athletename": "Ava Mills",
+                "eventname": "200",
+                "pr": "30.60"
+            },
+            {
+                "athletename": "Ava Mills",
+                "eventname": "HJ",
+                "pr": "1.53m"
+            },
+            {
+                "athletename": "Karley Ruiz-Genovese",
+                "eventname": "800",
+                "pr": "2:30.59"
+            }
+        ]
+    }
+]
