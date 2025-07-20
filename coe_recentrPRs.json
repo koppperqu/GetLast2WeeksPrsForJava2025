@@ -1,0 +1,30 @@
+[
+    {
+        "meetname": "Midwest Twilight Final Qualifier",
+        "meetdate": "May 14, 2025",
+        "numberofprs": 4,
+        "uniqueprs": 3,
+        "prsatmeet": [
+            {
+                "athletename": "Isaiah Morgan",
+                "eventname": "100",
+                "pr": "11.29"
+            },
+            {
+                "athletename": "Talon Sargent",
+                "eventname": "100",
+                "pr": "10.82"
+            },
+            {
+                "athletename": "Talon Sargent",
+                "eventname": "200",
+                "pr": "22.24"
+            },
+            {
+                "athletename": "Lily Mayo",
+                "eventname": "3000S",
+                "pr": "11:43.76"
+            }
+        ]
+    }
+]

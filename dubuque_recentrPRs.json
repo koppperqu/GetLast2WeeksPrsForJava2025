@@ -1,0 +1,60 @@
+[
+    {
+        "meetname": "Midwest Twilight Final Qualifier",
+        "meetdate": "May 14, 2025",
+        "numberofprs": 10,
+        "uniqueprs": 9,
+        "prsatmeet": [
+            {
+                "athletename": "Akim Baba Traore",
+                "eventname": "TJ",
+                "pr": "14.13m"
+            },
+            {
+                "athletename": "Anthony Carney",
+                "eventname": "3000S",
+                "pr": "8:59.13"
+            },
+            {
+                "athletename": "Samuel Maas",
+                "eventname": "SP",
+                "pr": "15.94m"
+            },
+            {
+                "athletename": "Kaden Miller",
+                "eventname": "400",
+                "pr": "49.49"
+            },
+            {
+                "athletename": "Otis Patterson",
+                "eventname": "200",
+                "pr": "21.10"
+            },
+            {
+                "athletename": "Otis Patterson",
+                "eventname": "400",
+                "pr": "46.78"
+            },
+            {
+                "athletename": "Jaberrius Peake",
+                "eventname": "200",
+                "pr": "21.14"
+            },
+            {
+                "athletename": "Jaidyn Williams",
+                "eventname": "TJ",
+                "pr": "15.15m"
+            },
+            {
+                "athletename": "Grace Kahon",
+                "eventname": "200",
+                "pr": "25.94"
+            },
+            {
+                "athletename": "Victoria Zoltowska",
+                "eventname": "100H",
+                "pr": "15.79"
+            }
+        ]
+    }
+]

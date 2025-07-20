@@ -1,139 +1,112 @@
 [
     {
-        "meetname": "La Crosse Final Qualifier",
-        "meetdate": "Mar 08, 2025",
-        "numberofprs": 26,
-        "uniqueprs": 26,
+        "meetname": "NCAA Division III Outdoor Track & Field Championships",
+        "meetdate": "May 22, 2025",
+        "numberofprs": 6,
+        "uniqueprs": 5,
         "prsatmeet": [
             {
-                "athletename": "Jake Gardner",
-                "eventname": "SP",
-                "pr": "15.06m"
+                "athletename": "William Cady",
+                "eventname": "TJ",
+                "pr": "14.87m"
             },
             {
-                "athletename": "Lukas Johnson",
-                "eventname": "60H",
-                "pr": "8.13"
+                "athletename": "Collin Conzemius",
+                "eventname": "400",
+                "pr": "46.68"
+            },
+            {
+                "athletename": "Amber Grosse",
+                "eventname": "SP",
+                "pr": "12.98m"
+            },
+            {
+                "athletename": "Lauren Jarrett",
+                "eventname": "200",
+                "pr": "23.44"
+            },
+            {
+                "athletename": "Alexys Scheuerell",
+                "eventname": "Hep",
+                "pr": "4699"
+            },
+            {
+                "athletename": "Alexys Scheuerell",
+                "eventname": "JT",
+                "pr": "30.44m"
+            }
+        ]
+    },
+    {
+        "meetname": "UWL Final Qualifier",
+        "meetdate": "May 14, 2025",
+        "numberofprs": 13,
+        "uniqueprs": 13,
+        "prsatmeet": [
+            {
+                "athletename": "Sam Blaskowski",
+                "eventname": "100",
+                "pr": "10.05"
+            },
+            {
+                "athletename": "Mitchell Eldredge",
+                "eventname": "HJ",
+                "pr": "1.99m"
+            },
+            {
+                "athletename": "Ayden Hart",
+                "eventname": "400H",
+                "pr": "53.27"
+            },
+            {
+                "athletename": "Gaven Lange",
+                "eventname": "PV",
+                "pr": "4.79m"
+            },
+            {
+                "athletename": "Nate Lawrence",
+                "eventname": "JT",
+                "pr": "60.10m"
             },
             {
                 "athletename": "Owen Layton",
-                "eventname": "Mile",
-                "pr": "4:20.10"
+                "eventname": "1500",
+                "pr": "3:58.22"
             },
             {
-                "athletename": "Nash Merklein",
-                "eventname": "Mile",
-                "pr": "4:14.34"
-            },
-            {
-                "athletename": "Aaron Poelma",
-                "eventname": "60H",
-                "pr": "8.07"
-            },
-            {
-                "athletename": "Logan Powers",
-                "eventname": "WT",
-                "pr": "18.20m"
-            },
-            {
-                "athletename": "Gavin Sargeant",
+                "athletename": "Gabe Olsen",
                 "eventname": "TJ",
-                "pr": "14.18m"
+                "pr": "14.85m"
+            },
+            {
+                "athletename": "Finn Patenaude",
+                "eventname": "400H",
+                "pr": "52.08"
             },
             {
                 "athletename": "Joey Sullivan",
-                "eventname": "Mile",
-                "pr": "4:10.29"
+                "eventname": "1500",
+                "pr": "3:48.92"
             },
             {
-                "athletename": "Ashley Davies",
-                "eventname": "LJ",
-                "pr": "5.63m"
-            },
-            {
-                "athletename": "Araceli De Leo Lopez",
-                "eventname": "PV",
-                "pr": "4.00m"
-            },
-            {
-                "athletename": "Lucy Duchac",
-                "eventname": "5000",
-                "pr": "17:03.29"
-            },
-            {
-                "athletename": "Gwen Hinz",
-                "eventname": "800",
-                "pr": "2:12.80"
-            },
-            {
-                "athletename": "Becca Immer",
-                "eventname": "Mile",
-                "pr": "5:05.28"
-            },
-            {
-                "athletename": "Mackenzey Kronberg",
-                "eventname": "TJ",
-                "pr": "11.72m"
+                "athletename": "Jayden Zywicki",
+                "eventname": "1500",
+                "pr": "3:48.85"
             },
             {
                 "athletename": "Ryana Mathis",
-                "eventname": "Mile",
-                "pr": "5:20.83"
+                "eventname": "1500",
+                "pr": "4:43.12"
             },
             {
-                "athletename": "Madelynn McIntyre",
-                "eventname": "5000",
-                "pr": "16:59.94"
+                "athletename": "Andie Otto",
+                "eventname": "400H",
+                "pr": "1:02.23"
             },
             {
-                "athletename": "Jenna Miller",
-                "eventname": "LJ",
-                "pr": "5.66m"
-            },
-            {
-                "athletename": "Gabby Patterson",
-                "eventname": "PV",
-                "pr": "3.50m"
-            },
-            {
-                "athletename": "Jadyn Roden",
-                "eventname": "SP",
-                "pr": "13.04m"
-            },
-            {
-                "athletename": "Bryn Sato",
-                "eventname": "Mile",
-                "pr": "5:13.80"
-            },
-            {
-                "athletename": "Alli Thomas",
-                "eventname": "800",
-                "pr": "2:12.89"
-            },
-            {
-                "athletename": "Macie Todd",
-                "eventname": "HJ",
-                "pr": "1.72m"
-            },
-            {
-                "athletename": "Natalie Wees",
-                "eventname": "3000",
-                "pr": "10:41.33"
-            },
-            {
-                "athletename": "Julie Yang",
-                "eventname": "60",
-                "pr": "7.65"
-            },
-            {
-                "athletename": "Makenna Zak",
-                "eventname": "60",
-                "pr": "7.63"
-            },
-            {
-                "athletename": "Megan Zemke",
-                "eventname": "60H",
-                "pr": "8.84"
+                "athletename": "Anika Reiland",
+                "eventname": "100",
+                "pr": "12.08"
             }
         ]
     }

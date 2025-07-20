@@ -8,13 +8,12 @@ from bs4 import BeautifulSoup
 
 from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent
-wiacTfrrsURL="https://www.tfrrs.org/leagues/1420.html"
 
 def getTeamsLastXMeets(soup, numberOfMeets=2):
     latestResultsAnchorTags = soup.find('h3',string='LATEST RESULTS').find_parent().find_parent().find('tbody').find_all('a')
     lastXMeets = []
     for x in range(numberOfMeets):
-        lastXMeets.append(latestResultsAnchorTags[x]['href'])
+        lastXMeets.append("https://www.tfrrs.org" + latestResultsAnchorTags[x]['href'])
     return lastXMeets
 
 def getAthletesLastXMeets(soup, numberOfMeets=2):
@@ -40,7 +39,7 @@ def getTeamsLinksAndNames(soup):
 def getTeamsAthleteLinksAndNames(teamLinks):
     teamAthleteLinks, teamAthleteNames = [],[]
     for eachTeam in teamLinks:
-        html = urlopen(eachTeam)
+        html = openHTTPUrl(eachTeam)
         soup=BeautifulSoup(html.read(), "html.parser")
         athleteLinks,athleteNames = getAthleteLinksAndNames(soup)
         teamAthleteLinks.append(athleteLinks)
@@ -50,27 +49,35 @@ def getTeamsAthleteLinksAndNames(teamLinks):
 def getAthleteLinksAndNames(soup):
     athleteLinksATag = soup.find('h3',string='ROSTER').find_parent().find('tbody').find_all('a')
     athleteNames,athleteLinks=[],[]
-    for eachLink in athleteLinksATag:        
+    for eachLink in athleteLinksATag:
         nameParts=eachLink.getText().split(', ')
         athleteNames.append(nameParts[1].strip()+' '+nameParts[0].strip())
         athleteLinks.append('https://www.tfrrs.org'+eachLink['href'])
     return(athleteLinks,athleteNames)
 
-def getAllTeamsLast2WeeksPrsPutInJSONFormat():
-    html = urlopen(wiacTfrrsURL)
+def getAllTeamsLast2WeeksPrsPutInJSONFormat(url):
+    html = openHTTPUrl(url)
     soup=BeautifulSoup(html.read(), "html.parser")
+    ##All the teams links, team names for the conference
     teamLinks,teamNames = getTeamsLinksAndNames(soup)
+    ##all the male athlete links and male athlete names for each team in their own array
     teamMaleAthleteLinks, teamMaleAthleteNames = getTeamsAthleteLinksAndNames(teamLinks)
     womensLinks = []
     for each in teamLinks:
         womensLinks.append(each.replace('_m_','_f_'))
+    ##all the female athlete links and female athlete names for each team in their own array
     teamFemaleAthleteLinks, teamFemaleAthleteNames = getTeamsAthleteLinksAndNames(womensLinks)
     teamAthleteLinks,teamAthleteNames=[],[]
+    ##Here we are combing all the athelte link and athletes names for each team, per each team
+    ##meaning for each team in the conference there will be a list of all female and male links and
+    ##female and male names.
     for index,each in enumerate(teamMaleAthleteLinks):
         teamAthleteLinks.append(each+teamFemaleAthleteLinks[index])
         teamAthleteNames.append(teamMaleAthleteNames[index]+teamFemaleAthleteNames[index])
+    ##This will now process each team and all its athletes
+    ##teamLinks, teamAthleteLinks, teamAthleteNames are parallel lists
     for teamIndex, eachTeamLink in enumerate(teamLinks):
-        html = urlopen(eachTeamLink)
+        html = openHTTPUrl(eachTeamLink)
         soup=BeautifulSoup(html.read(), "html.parser")
         lastXMeets = getTeamsLastXMeets(soup)
         initalDictionary = []
@@ -79,29 +86,12 @@ def getAllTeamsLast2WeeksPrsPutInJSONFormat():
             #get their meet reuslt and check if pr recent
             percent = (athleteIndex + 1) / len(teamAthleteLinks[teamIndex]) * 100
             print(f"Progress: {percent:.2f}%", end="\r")
-            try:
-                time.sleep(0.5)
-                html=urlopen(eachAthleteLink)
-            except:
-                try:
-                    print("Second try (30seconds) "+eachAthleteLink)
-                    time.sleep(30)
-                    html=urlopen(eachAthleteLink)
-                except:
-                    try:
-                        print("Third try (60seconds) "+eachAthleteLink)
-                        time.sleep(60)
-                        html=urlopen(eachAthleteLink)
-                    except:
-                        print("Fourth try (120seconds) "+eachAthleteLink)
-                        time.sleep(120)
-                        html=urlopen(eachAthleteLink)
-
+            html=openHTTPUrl(eachAthleteLink)
             soup=BeautifulSoup(html.read(), "html.parser")
             athleteRecentMeetURLs, athletesRecentMeets= getAthletesLastXMeets(soup)
             ##**COMPARE THE MEETS IF IT IS A SCHOOLS MOST RECENT CHECK FOR PRS IF NOT SKIP**##
             for meetIndex,eachMeet in enumerate(athleteRecentMeetURLs):
-                if (lastXMeets[meetIndex] in eachMeet):
+                if (eachMeet in lastXMeets):
                     inputDate = athletesRecentMeets[meetIndex].find('span').text.strip()
                     #Special case for dates like April 13-14, 2021
                     if '-' in inputDate:
@@ -140,4 +130,27 @@ def getAllTeamsLast2WeeksPrsPutInJSONFormat():
         f.write(json.dumps(prepForJSON, indent=4))
         f.close()
 
-getAllTeamsLast2WeeksPrsPutInJSONFormat()
+def openHTTPUrl(url):
+    lastError = None
+    for attempt in range(5):
+        try:
+            html = urlopen(url)
+        except Exception as e:
+            lastError = e
+            if attempt < 4:  # Don't wait after the last attempt
+                waitTime = 10 * (2 ** attempt)  # 10, 20, 40, 80 seconds
+                print("Waiting "+str(waitTime)+" seconds")
+                time.sleep(waitTime)
+            continue
+        else:
+            return html
+    print ("Issue opening url " + url)
+    print(lastError)
+    sys.exit(1)
+
+print("Starting scraper...")
+wiacTfrrsURL="https://www.tfrrs.org/leagues/1420.html"
+americanRiversTfrrsURL="https://www.tfrrs.org/leagues/1400.html"
+getAllTeamsLast2WeeksPrsPutInJSONFormat(wiacTfrrsURL)
+getAllTeamsLast2WeeksPrsPutInJSONFormat(americanRiversTfrrsURL)
+

@@ -1,0 +1,218 @@
+[
+    {
+        "meetname": "UWL Final Qualifier",
+        "meetdate": "May 14, 2025",
+        "numberofprs": 11,
+        "uniqueprs": 11,
+        "prsatmeet": [
+            {
+                "athletename": "Jacob Bruns",
+                "eventname": "3000S",
+                "pr": "9:42.77"
+            },
+            {
+                "athletename": "Philip Dahlen",
+                "eventname": "1500",
+                "pr": "4:08.60"
+            },
+            {
+                "athletename": "Austyn Riehle",
+                "eventname": "400",
+                "pr": "52.08"
+            },
+            {
+                "athletename": "Garrett Seppanen",
+                "eventname": "1500",
+                "pr": "4:01.69"
+            },
+            {
+                "athletename": "Sorley Swanstrom-Arnold",
+                "eventname": "800",
+                "pr": "1:57.84"
+            },
+            {
+                "athletename": "Logan Thompson",
+                "eventname": "800",
+                "pr": "1:53.05"
+            },
+            {
+                "athletename": "Ava Cummings",
+                "eventname": "200",
+                "pr": "27.92"
+            },
+            {
+                "athletename": "Annika Elco",
+                "eventname": "100H",
+                "pr": "15.45"
+            },
+            {
+                "athletename": "Grace Landmesser",
+                "eventname": "200",
+                "pr": "28.01"
+            },
+            {
+                "athletename": "Amara Marks",
+                "eventname": "200",
+                "pr": "26.69"
+            },
+            {
+                "athletename": "Norah McDonald",
+                "eventname": "3000S",
+                "pr": "12:26.72"
+            }
+        ]
+    },
+    {
+        "meetname": "American Rivers Conference Championships",
+        "meetdate": "May 08, 2025",
+        "numberofprs": 29,
+        "uniqueprs": 18,
+        "prsatmeet": [
+            {
+                "athletename": "Gideon Armah - Amissah",
+                "eventname": "TJ",
+                "pr": "12.75m"
+            },
+            {
+                "athletename": "Reid Binsfeld",
+                "eventname": "10,000",
+                "pr": "33:55.66"
+            },
+            {
+                "athletename": "Jack Bode",
+                "eventname": "3000S",
+                "pr": "9:30.19"
+            },
+            {
+                "athletename": "Jermaine Dizon",
+                "eventname": "800",
+                "pr": "1:59.87"
+            },
+            {
+                "athletename": "Johnny Fox",
+                "eventname": "10,000",
+                "pr": "33:19.04"
+            },
+            {
+                "athletename": "Jared Hanson",
+                "eventname": "100",
+                "pr": "11.23"
+            },
+            {
+                "athletename": "Jared Hanson",
+                "eventname": "400",
+                "pr": "49.59"
+            },
+            {
+                "athletename": "Jared Hanson",
+                "eventname": "DT",
+                "pr": "28.83m"
+            },
+            {
+                "athletename": "Jared Hanson",
+                "eventname": "SP",
+                "pr": "9.31m"
+            },
+            {
+                "athletename": "Joey Mehlhorn",
+                "eventname": "HT",
+                "pr": "45.38m"
+            },
+            {
+                "athletename": "Austyn Riehle",
+                "eventname": "100",
+                "pr": "11.01"
+            },
+            {
+                "athletename": "Ashten Schultz",
+                "eventname": "JT",
+                "pr": "48.01m"
+            },
+            {
+                "athletename": "Ashten Schultz",
+                "eventname": "100",
+                "pr": "11.46"
+            },
+            {
+                "athletename": "Ashten Schultz",
+                "eventname": "1500",
+                "pr": "5:09.73"
+            },
+            {
+                "athletename": "Ashten Schultz",
+                "eventname": "400",
+                "pr": "54.53"
+            },
+            {
+                "athletename": "Eli Shubatt",
+                "eventname": "3000S",
+                "pr": "9:52.93"
+            },
+            {
+                "athletename": "Logan Strom",
+                "eventname": "HT",
+                "pr": "41.01m"
+            },
+            {
+                "athletename": "Anna Cummins",
+                "eventname": "SP",
+                "pr": "10.00m"
+            },
+            {
+                "athletename": "Lucille Hanson",
+                "eventname": "SP",
+                "pr": "9.36m"
+            },
+            {
+                "athletename": "Lucille Hanson",
+                "eventname": "HT",
+                "pr": "40.25m"
+            },
+            {
+                "athletename": "Lucille Hanson",
+                "eventname": "JT",
+                "pr": "22.62m"
+            },
+            {
+                "athletename": "Ashley Imdieke",
+                "eventname": "HT",
+                "pr": "34.40m"
+            },
+            {
+                "athletename": "Grace Landmesser",
+                "eventname": "Hep",
+                "pr": "2893"
+            },
+            {
+                "athletename": "Grace Landmesser",
+                "eventname": "100H",
+                "pr": "19.38"
+            },
+            {
+                "athletename": "Grace Landmesser",
+                "eventname": "800",
+                "pr": "2:41.38"
+            },
+            {
+                "athletename": "Grace Landmesser",
+                "eventname": "LJ",
+                "pr": "4.39m"
+            },
+            {
+                "athletename": "Mia Lung",
+                "eventname": "1500",
+                "pr": "5:29.33"
+            },
+            {
+                "athletename": "Lindsey Moseley",
+                "eventname": "3000S",
+                "pr": "11:58.02"
+            },
+            {
+                "athletename": "Annika Veit",
+                "eventname": "10,000",
+                "pr": "42:53.43"
+            }
+        ]
+    }
+]
